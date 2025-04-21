@@ -1,5 +1,5 @@
 const {register,current,login}=require('../controller/userController.js')
-const validate=require('../middleware/verifytoken.js');
+const validate=require('../middleware/verifyToken.js');
 const express=require('express');
 const router=express.Router();
 
