@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
   });
 app.use(express.static(path.join(__dirname, "frontend")));
 app.get("/hangman", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "HangmanGame-main", "index.html"));
+  res.sendFile(path.join(__dirname, "HangmanGame-main", "index.html"));
 });
 
 app.use("/homepage",require("./routes/homepageRoutes.js"))
