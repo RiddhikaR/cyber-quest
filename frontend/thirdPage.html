@@ -244,7 +244,7 @@
         <p>
              The battle between true and false identities intensifies. Will you spot the frauds hiding behind fake email addresses?</p>
       </div>
-      <button onclick="window.location.href='../HangmanGame-main/front_page.html';">LEVEL 2</button>
+      <button onclick="window.location.href='../HangmanGame-main/index.html';">LEVEL 2</button>
     </div>
     <div class="block">
       <div class="square">
@@ -268,7 +268,7 @@
     return;
   }
 
-  fetch(`http://localhost:3000/game1/score/get-scores/${email}`)
+  fetch(`https://web-project-8.onrender.com/game1/score/get-scores/${email}`)
     .then(response => response.json())
     .then(data => {
       console.log("📥 Received scores data:", data);
