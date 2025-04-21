@@ -28,6 +28,9 @@ mongoose.connect(process.env.CONNECTION)
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "frontend")))
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "frontend", "frontend.html"));
+  });
 app.use("/homepage",require("./routes/homepageRoutes.js"))
 app.use("/loginpage",require("./routes/loginPageRouter.js"))
 app.use("/game1/quiz/user",require("./routes/usersRoutes.js"))
