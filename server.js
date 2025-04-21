@@ -29,7 +29,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "frontend")))
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend", "frontend.html"));
+    res.sendFile(path.join(__dirname, "frontend", "front_page.html"));
   });
 app.use("/homepage",require("./routes/homepageRoutes.js"))
 app.use("/loginpage",require("./routes/loginPageRouter.js"))
