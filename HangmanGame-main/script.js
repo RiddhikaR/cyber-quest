@@ -192,7 +192,7 @@ loadQuestion();
               alert("User not logged in. Score not saved.");
               return;
           }
-          fetch('http://localhost:3000/game1/score/save-score', {  // Use relative URL for production
+          fetch('https://web-project-8.onrender.com/game1/score/save-score', {  // Use relative URL for production
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ email, game: "hangman", score }),
