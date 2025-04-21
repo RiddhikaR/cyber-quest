@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, "frontend")));
 app.get("/hangman", (req, res) => {
   res.sendFile(path.join(__dirname, "HangmanGame-main", "index.html"));
 });
-app.get("/hangman", (req, res) => {
+app.get("/shooting", (req, res) => {
   res.sendFile(path.join(__dirname, "shooting", "shooting_game.html"));
 });
 
