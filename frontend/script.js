@@ -44,7 +44,7 @@ const gameOver = (lost) => {
   answer.innerText = word;
 
   if (!lost) {
-    gameoverimg.src = "/images/victory.gif";
+    gameoverimg.src = "victory.gif";
     h3.innerText = "Congrats!";
     h6.innerText = "You Guessed The Correct Answer!";
     score++; // increase score only if user wins
@@ -85,7 +85,7 @@ const resetGame = () => {
   keyboard.innerHTML = "";
   count = 0;
   chance.innerText = "0/6";
-  img.src = "images/hangman-0.svg";
+  img.src = "hangman-0.svg";
   gameover.classList.remove("show");
   document.querySelector(".game").style.opacity = 1;
 
@@ -163,12 +163,12 @@ const loadQuestion = () => {
   
       matchWord(letter);
   
-      if (count === 1) img.src = "images/hangman-1.svg";
-      else if (count === 2) img.src = "images/hangman-2.svg";
-      else if (count === 3) img.src = "images/hangman-4.svg";
-      else if (count === 4) img.src = "images/hangman-5.svg";
+      if (count === 1) img.src = "hangman-1.svg";
+      else if (count === 2) img.src = "hangman-2.svg";
+      else if (count === 3) img.src = "hangman-4.svg";
+      else if (count === 4) img.src = "hangman-5.svg";
       else if (count >= 6) {
-        img.src = "images/hangman-6.svg";
+        img.src = "hangman-6.svg";
         setTimeout(() => gameOver(true), 200);
       }
   
