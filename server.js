@@ -31,13 +31,7 @@ app.use(express.static(path.join(__dirname, "frontend")))
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "frontend", "front_page.html"));
   });
-app.use(express.static(path.join(__dirname, "frontend")));
-app.get("/hangman", (req, res) => {
-  res.sendFile(path.join(__dirname, "HangmanGame-main", "index.html"));
-});
-app.get("/shooting", (req, res) => {
-  res.sendFile(path.join(__dirname, "shooting", "shooting_game.html"));
-});
+
 
 app.use("/homepage",require("./routes/homepageRoutes.js"))
 app.use("/loginpage",require("./routes/loginPageRouter.js"))
