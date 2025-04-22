@@ -273,7 +273,7 @@
       wordDisplay.innerHTML = "";
       count = 0;
       chance.innerText = "0/6";
-      img.src = "images/hangman-0.svg";
+      img.src = "hangman-0.svg";
 
       if (currentWordIndex >= shuffledWordList.length) {
         shuffledWordList = shuffleArray([...wordList]);
@@ -371,7 +371,7 @@
     const showFinalScore = () => {
       gameover.classList.add("show");
       document.querySelector(".game").style.display = "none";
-      gameoverimg.src = "images/victory.gif";
+      gameoverimg.src = "victory.gif";
       h3.innerText = "Game Over!";
       h6.innerHTML = `You answered ${score} out of ${maxQuestions} correctly.`;
     };
